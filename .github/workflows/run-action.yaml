@@ -1,0 +1,15 @@
+name: Run ansible-lint action
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test_action_job:
+    runs-on: ubuntu-latest
+    name: A job to test the ansible-lint action
+    steps:
+      - name: Ansible-lint action step
+        id: hello
+        uses: timbuchinger/ansible-lint@main
+        with:
+          filter: playbook.yml

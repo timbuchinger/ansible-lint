@@ -1,0 +1,8 @@
+---
+- hosts: all
+  gather_facts: no
+  tasks:
+    - name: debug
+      debug:
+        msg: 'Generate an ansible-lint failure'
+      ignore_errors: true

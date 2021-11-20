@@ -1,0 +1,15 @@
+name: 'ansible-lint'
+description: 'Run ansible-lint against your Ansible automation'
+author: 'Tim Buchinger'
+branding:
+  icon: stop-circle
+  color: gray-dark
+inputs:
+  filter:
+    description: 'Filter of files to lint'
+    default: 'roles/*/tasks/*.yml'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+      - ${{ inputs.filter }}

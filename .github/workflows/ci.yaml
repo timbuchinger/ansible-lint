@@ -1,8 +1,7 @@
-name: CI to GitHub Registry
+name: CI
 
 on:
-  # push:
-  #   branches: [ main ]
+  push:
   workflow_dispatch:
 
 jobs:

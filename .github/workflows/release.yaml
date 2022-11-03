@@ -39,8 +39,8 @@ jobs:
           file: Dockerfile
           push: true
           tags: |
-            ${{ secrets.DOCKER_HUB_USERNAME }}/ansible-lint:${{ env.TAG }}
-            ${{ secrets.DOCKER_HUB_USERNAME }}/ansible-lint:latest
+            ${{ secrets.DOCKERHUB_USERNAME }}/ansible-lint:${{ env.TAG }}
+            ${{ secrets.DOCKERHUB_USERNAME }}/ansible-lint:latest
 
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
